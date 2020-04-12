@@ -1,0 +1,22 @@
+{
+  "name": "code-mentoring-www",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently 'next dev' 'yarn netlify-cms-proxy-server'",
+    "build": "next build; next export"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/react": "^16.9.34",
+    "concurrently": "^5.1.0",
+    "frontmatter-markdown-loader": "^3.3.0",
+    "netlify-cms": "2.10.17",
+    "netlify-cms-proxy-server": "^1.2.4",
+    "next": "^9.3.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.8.3"
+  }
+}

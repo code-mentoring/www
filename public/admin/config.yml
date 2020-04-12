@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: public/img
+public_folder: img
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/home.md"
+        fields:
+        - {label: "Title", name: "title", widget: "string"}
+        - label: "Banner"
+          name: "banner"
+          widget: "object"
+          fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Sub Title", name: "subTitle", widget: "string"}
+            - label: "Button 1"
+              name: "button1"
+              widget: "object"
+              fields:
+                - {label: "Text", name: "text", widget: "string"}
+                - {label: "Link", name: "link", widget: "string"}
+            - label: "Button 2"
+              name: "button2"
+              widget: "object"
+              fields:
+                - {label: "Text", name: "text", widget: "string"}
+                - {label: "Link", name: "link", widget: "string"}
