@@ -15,6 +15,7 @@ export const Page: React.FC<PageProps> = ({
     <Head>
       <title>{title}</title>
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      <link rel="stylesheet" href="/fonts/butler/butler.css"/>
     </Head>
     <Header />
     {children}
