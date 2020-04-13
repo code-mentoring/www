@@ -7,7 +7,7 @@ import { Icon } from '../Icon/Icon';
 
 export const Footer: React.FC = () => {
   return <footer className={classnames(styles.footer, "bg-primary-200")}>
-    <div className="container mx-auto h-full grid grid-cols-3 items-center py-8">
+    <div className="container mx-auto h-full grid grid-cols-3 items-center py-20">
       <a href="/" className="mr-auto">
         <img src="/images/logo.svg" alt="Code Mentoring" className="h-12" />
       </a>
@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
       <nav className="grid grid-cols-2">
         {SETTINGS.footer.menu.map(l => <a
           href={l.link}
-          className="uppercase font-bold text-grey-500 px-2 mx-1 hover:text-primary-500 transition-colors duration-100"
+          className="h-8 uppercase font-bold text-grey-500 px-2 mx-1 hover:text-primary-500 transition-colors duration-100"
         >{l.text}</a>)}
       </nav>
 
