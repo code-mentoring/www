@@ -4,8 +4,6 @@ import React, { PropsWithRef } from 'react';
 
 import { icons } from './icons';
 
-console.log(icons);
-
 export type IconType = keyof typeof icons;
 
 export interface IconProps extends PropsWithRef<any> {
