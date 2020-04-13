@@ -1,0 +1,6 @@
+@import '../../css/components/triangle.css';
+
+.footer {
+  &:before { @mixin triangle-top theme('colors.blue.200'); }
+  @apply bg-gradient-t-lightBlue;
+}

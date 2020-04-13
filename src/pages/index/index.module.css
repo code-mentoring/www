@@ -1,0 +1,32 @@
+@import '../../css/components/triangle.css';
+
+section.title {
+  @apply bg-gradient-b-lightBlue;
+  &:after {
+    @mixin triangle-bottom theme('colors.blue.200');
+  }
+
+}
+
+.square {
+  position: absolute;
+  border: 10px solid theme('colors.primary.400');
+  padding-bottom: 80%;
+  width: 80%;
+  top: -10%;
+  right: -5%;
+}
+
+
+section.learning {
+  &:before { @mixin triangle-top theme('colors.green.100'); }
+  &:after { @mixin triangle-bottom theme('colors.green.100'); }
+
+  img {
+    width: calc(100% + 10rem);
+    margin-top: -4rem;
+    margin-bottom: -14rem;
+    margin-left: -3rem;
+    margin-right: -7rem;
+  }
+}

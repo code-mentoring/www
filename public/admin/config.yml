@@ -2,33 +2,126 @@ backend:
   name: git-gateway
   branch: feature/nextjs
 
+local_backend:
+  url: http://localhost:8081/api/v1
+
 media_folder: public/img
 public_folder: img
 
+# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------- [DEFINITIONS]
+# ------------------------------------------------------------------------------
+# Menu definition
+Menu: &menu
+  label: Menu
+  name: "menu"
+  widget: "list"
+  fields:
+    - { label: "Text", name: "text", widget: "string" }
+    - { label: "Link", name: "link", widget: "string" }
+
+# ------------------------------------------------------------------------------
+# ---------------------------------------------------------------- [Collections]
+# ------------------------------------------------------------------------------
 collections:
   - name: "pages"
     label: "Pages"
     files:
+      # ------------------------------------------------------------------------
+      # ----------------------------------------------------------------- [HOME]
+      # ------------------------------------------------------------------------
       - label: "Home"
         name: "home"
         file: "content/home.md"
         fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - label: "Banner"
-          name: "banner"
-          widget: "object"
-          fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Sub Title", name: "subTitle", widget: "string"}
-            - label: "Button 1"
-              name: "button1"
-              widget: "object"
-              fields:
-                - {label: "Text", name: "text", widget: "string"}
-                - {label: "Link", name: "link", widget: "string"}
-            - label: "Button 2"
-              name: "button2"
-              widget: "object"
-              fields:
-                - {label: "Text", name: "text", widget: "string"}
-                - {label: "Link", name: "link", widget: "string"}
+          - { label: "Title", name: "title", widget: "string" }
+
+          # ---------------------------------------- [HOME] Title/banner section
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Title", name: "subTitle", widget: "textarea" }
+              - label: "Button 1"
+                name: "button1"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+              - label: "Button 2"
+                name: "button2"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+
+          # ----------------------------------------------- [HOME] Paths section
+          - label: "Paths section"
+            name: "paths"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+
+          # -------------------------------------------- [HOME] Learning section
+          - label: "Learning section"
+            name: "learning"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "textarea" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+
+          # --------------------------------------------- [HOME] Parners section
+          - label: "Partners section"
+            name: "partners"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - label: Partners
+                name: "menu"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Logo", name: "logo", widget: "image" }
+
+  # ----------------------------------------------------------------------------
+  # ---------------------------------------------------------- [GLOBAL SETTINGS]
+  # ----------------------------------------------------------------------------
+  - name: "settings"
+    label: "Site Settings"
+    slug: "siteSettings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "siteSettings"
+        label: "Site Settings"
+        file: "content/settings.yml"
+        description: "Settings for the entire site"
+        fields:
+          # ------------------------------------------- [GLOBAL SETTINGS] Header
+          - label: Header
+            name: "header"
+            widget: "object"
+            fields:
+              - <<: *menu
+
+          # ------------------------------------------- [GLOBAL SETTINGS] Footer
+          - label: Footer
+            name: "footer"
+            widget: "object"
+            fields:
+              - <<: *menu
+              - label: Paths
+                name: "paths"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }

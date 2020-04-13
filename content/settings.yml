@@ -1,0 +1,40 @@
+header:
+  menu:
+    - text: Students
+      link: /students
+    - text: Mentors
+      link: /mentors
+    - text: Philosophy
+      link: /philosophy
+    - text: Events
+      link: /events
+
+footer:
+  menu:
+    - text: Students
+      link: /students
+    - text: Mentors
+      link: /mentors
+    - text: Philosophy
+      link: /philosophy
+    - text: Events
+      link: /events
+    - text: Sponsor us
+      link: /sponsor-us
+    - text: Contact us
+      link: /contact-us
+  social:
+    facebook: https://facebook.com/code-mentoring
+    linkedIn: https://linkedin.com/company/code-mentoring
+
+paths:
+  - name: HTML
+    image: /images/paths/html.svg
+  - name: CSS
+    image: /images/paths/css.svg
+  - name: JS
+    image: /images/paths/js.svg
+  - name: Node.js
+    image: /images/paths/nodejs.svg
+  - name: React
+    image: /images/paths/react.svg
