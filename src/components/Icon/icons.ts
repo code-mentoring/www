@@ -6,4 +6,3 @@ export const icons = {
   linkedIn,
   facebook
 };
-
