@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "concurrently \"next dev\" \"yarn netlify-cms-proxy-server\"",
-    "build": "next build; next export"
+    "build": "next build; next export",
+    "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
+    "lint:fix": "yarn lint --fix",
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
