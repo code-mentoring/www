@@ -1,3 +1,3 @@
-const settings = require('@code-mentoring/ui/tailwind.config.js')
+const settings = require('@code-mentoring/ui/tailwind.config.js');
 
 module.exports = settings;

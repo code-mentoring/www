@@ -1,5 +1,5 @@
 module.exports = {
-  webpack: (cfg) => {
+  webpack: cfg => {
     cfg.module.rules.push(
       {
         test: /\.md$/,
@@ -15,7 +15,7 @@ module.exports = {
         test: /\.svg$/,
         loader: 'react-svg-loader'
       }
-    )
+    );
     return cfg;
   }
-}
+};
