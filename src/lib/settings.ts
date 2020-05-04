@@ -1,3 +1,4 @@
+// eslint-disable-next-line global-require
 export const SETTINGS: SiteSettings = require('../../content/settings.yml');
 
 export interface SiteSettings {

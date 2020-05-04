@@ -1,3 +1,4 @@
+import React from 'react';
 import classnames from 'classnames';
 
 import { Page } from '../../components/Page/Page';
@@ -51,7 +52,7 @@ export default () => {
           <a className="btn btn-tertiary" href={banner.button2.link}>{banner.button2.text}</a>
         </div>
         <div className="w-5/12 relative">
-          <div className={styles.square}></div>
+          <div className={styles.square} />
           <img src={banner.image} alt="Coding community" className="relative" />
         </div>
       </div>
@@ -62,7 +63,7 @@ export default () => {
         <h3>{data.paths.title}</h3>
         <ul className="paths grid grid-cols-5 gap-4 my-6">
           {SETTINGS.paths.map(p => <li className="text-center">
-            <img src={p.image} alt={p.name} className="h-12 inline-block mb-1"/>
+            <img src={p.image} alt={p.name} className="h-12 inline-block mb-1" />
             <span className="block">{p.name}</span>
           </li>)}
         </ul>
@@ -70,7 +71,7 @@ export default () => {
       </div>
     </section>
 
-    <section className={classnames(styles.learning, "bg-green-100 -mt-10")}>
+    <section className={classnames(styles.learning, 'bg-green-100 -mt-10')}>
       <div className="container mx-auto mt-32 pb-32">
         <h2 className="max-w-md">{data.learning.title}</h2>
         <p className="max-w-md mt-4 mb-8">{data.learning.content}</p>
@@ -84,11 +85,10 @@ export default () => {
         <h3 className="text-tertiary-500">{data.partners.title}</h3>
         <div className={`paths grid grid-cols-${data.partners.partners.length} gap-8 items-center my-6`}>
           {data.partners.partners.map(p =>
-            <img src={p.logo} alt={p.name} className="max-h-8 inline-block mb-1" />
-          )}
+            <img src={p.logo} alt={p.name} className="max-h-8 inline-block mb-1" />)}
         </div>
         <a href={data.partners.link} className="btn btn-tertiary">{data.partners.linkText}</a>
       </div>
     </section>
   </Page>;
-}
+};

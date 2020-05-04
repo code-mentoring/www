@@ -1,19 +1,3 @@
-// Remove unused CSS on production
-const purgecss = [
-  "@fullhuman/postcss-purgecss",
-  {
-    content: ["./components/**/*.js", "./pages/**/*.js"],
-    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-  }
-];
+const settings = require('@code-mentoring/ui/postcss.config.js')
 
-module.exports = {
-  plugins: [
-    "postcss-import",
-    "postcss-mixins",
-    "tailwindcss",
-    "autoprefixer",
-    "postcss-nested",
-    // ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
-  ]
-};
+module.exports = settings;
