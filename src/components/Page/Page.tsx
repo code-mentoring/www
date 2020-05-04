@@ -14,6 +14,7 @@ export const Page: React.FC<PageProps> = ({
   <Head>
     <title>{title}</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+    <meta name="google-site-verification" content="A6y4_OItUBVEXcovwaDi3ZT_atbV-LUmBT0kdc7hJVY" />
     <link rel="stylesheet" href="/fonts/butler/butler.css" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
