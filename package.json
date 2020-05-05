@@ -9,13 +9,24 @@
     "lint:fix": "yarn lint --fix"
   },
   "devDependencies": {
+    "@codement/ui": "^0.0.4-feature-ci-publish.0",
     "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@types/jest": "^25.2.1",
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
     "autoprefixer": "^9.7.6",
     "classnames": "^2.2.6",
     "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-import-resolver-ts": "^0.4.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
     "frontmatter-markdown-loader": "^3.3.0",
+    "jest": "^25.4.0",
     "netlify-cms": "2.10.17",
     "netlify-cms-proxy-server": "^1.2.4",
     "next": "^9.3.4",
@@ -29,16 +40,6 @@
     "tailwindcss": "^1.2.0",
     "tailwindcss-gradients": "^3.0.0",
     "typescript": "^3.8.3",
-    "yaml-loader": "^0.6.0",
-    "@types/jest": "^25.2.1",
-    "@typescript-eslint/eslint-plugin": "^2.29.0",
-    "@typescript-eslint/parser": "^2.29.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-import-resolver-ts": "^0.4.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
-    "jest": "^25.4.0"
+    "yaml-loader": "^0.6.0"
   }
 }

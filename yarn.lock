@@ -1011,6 +1011,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@codement/ui@^0.0.4-feature-ci-publish.0":
+  version "0.0.4-feature-ci-publish.0"
+  resolved "https://registry.yarnpkg.com/@codement/ui/-/ui-0.0.4-feature-ci-publish.0.tgz#db44337edb116c26f9c846d82c8c10f928aef813"
+  integrity sha512-h9Hc6luqCb7NJjuToMr/buVyfpXBpX0gXPSHN9sCqkUHd+7BfLpM/fEDsd4qsh2xKwxqCS0aTH4HHdo9C3OULQ==
+
 "@emotion/babel-utils@^0.6.4":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.10.tgz#83dbf3dfa933fae9fc566e54fbb45f14674c6ccc"
