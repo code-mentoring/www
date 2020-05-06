@@ -1,0 +1,9 @@
+.wrapper {
+  @apply text-center mx-auto mt-48;
+  max-width: 30rem;
+
+  form {
+    @apply mx-auto;
+    max-width: 25rem;
+  }
+}
