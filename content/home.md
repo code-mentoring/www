@@ -6,7 +6,7 @@ banner:
   subTitle: We’re an international community of weekly meetups that provide free mentoring and coaching for developers.
   button1:
     text: Join as a student
-    link: /students
+    link: /signup
   button2:
     text: Join as a mentor
     link: /mentors

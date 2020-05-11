@@ -47,17 +47,16 @@ export default () => {
             You’ll see how easy it really is <span role="img" aria-label="img">😊</span>.
             Fill out your details below to join our community and platform.
           </p>
-
           <Form
             className="grid grid-cols-2 col-gap-4 row-gap-2"
             onSubmit={submit}
             validationSchema={signupValidation}
+            error={success === 'Duplicate Email' ? 'You\'re already registered with this email!' : null}
           >
             <FormField name="firstName" type="text" placeholder="First name" />
             <FormField name="lastName" type="text" placeholder="Last name" />
             <FormField name="email" placeholder="Email" type="text" className="col-span-2" />
             <FormField name="password" placeholder="Password" type="password" className="col-span-2" />
-            {success === 'Duplicate Email' ? <p>You are already registered!</p> : null}
             <Button type="submit" color="success" size="large" className="col-span-2">Signup</Button>
           </Form>
         </div>

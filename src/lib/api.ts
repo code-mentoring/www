@@ -7,7 +7,6 @@ export abstract class API {
 
   static async signup(user: UserInput) {
     const res = await axios.post(this.url, {
-      // body: {
       variables: { user },
       query: `mutation ($user: UserInput!) {
           createUser(user:$user) {
