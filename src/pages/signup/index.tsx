@@ -20,14 +20,17 @@ const signupValidation = yup.object().shape({
 
 export default () => {
 
-  const [success, updateStatus] = useState(null);
+  const [success, isSuccessful] = useState(false);
+  const [error, updateErrorMsg] = useState('');
 
   const submit = async (values: UserInput) => {
     const res = await API.signup(values);
     if (res.data?.createUser) {
-      updateStatus('User Registered Successfully');
+      isSuccessful(true);
+      updateErrorMsg('');
     } else if (res.errors[0].message) {
-      updateStatus('Duplicate Email');
+      isSuccessful(false);
+      updateErrorMsg('Duplicate Email');
     } else {
       console.error('why did this execute');
     }
@@ -38,7 +41,7 @@ export default () => {
       <img src="/images/logo.svg" alt="Code Mentoring" className="h-12 mx-auto mt-5" />
     </header>
     {
-      !success || success === 'Duplicate Email'
+      !success || error === 'Duplicate Email'
         ? <div className={styles.wrapper}>
 
           <h1>Start learning how to code today!</h1>
@@ -51,7 +54,7 @@ export default () => {
             className="grid grid-cols-2 col-gap-4 row-gap-2"
             onSubmit={submit}
             validationSchema={signupValidation}
-            error={success === 'Duplicate Email' ? 'You\'re already registered with this email!' : null}
+            error={!success && error === 'Duplicate Email' ? 'You\'re already registered with this email!' : null}
           >
             <FormField name="firstName" type="text" placeholder="First name" />
             <FormField name="lastName" type="text" placeholder="Last name" />
