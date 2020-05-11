@@ -17,7 +17,7 @@ export abstract class API {
           }
         }`
     });
-    console.log(res);
+    return res.data;
 
   }
 }

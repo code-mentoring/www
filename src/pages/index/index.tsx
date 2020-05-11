@@ -46,7 +46,7 @@ export default () => {
     <section className={styles.title}>
       <div className="container mx-auto flex items-center pt-48 pb-10">
         <div className="w-7/12">
-          <h1>{banner.title}</h1>
+          <h1 className="title">{banner.title}</h1>
           <p className="mt-4 mb-10 max-w-md">{banner.subTitle}</p>
           <a className="btn btn-secondary mr-4" href={banner.button1.link}>{banner.button1.text}</a>
           <a className="btn btn-tertiary" href={banner.button2.link}>{banner.button2.text}</a>

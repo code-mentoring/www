@@ -1,5 +1,5 @@
 .wrapper {
-  @apply text-center mx-auto mt-48;
+  @apply text-center mx-auto mt-32;
   max-width: 30rem;
 
   form {
