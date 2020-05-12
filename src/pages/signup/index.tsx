@@ -30,9 +30,7 @@ export default () => {
       updateErrorMsg('');
     } else if (res.errors[0].message) {
       isSuccessful(false);
-      updateErrorMsg('Duplicate Email');
-    } else {
-      console.error('why did this execute');
+      updateErrorMsg('You\'re already registered with this email!');
     }
   };
 
@@ -41,7 +39,7 @@ export default () => {
       <img src="/images/logo.svg" alt="Code Mentoring" className="h-12 mx-auto mt-5" />
     </header>
     {
-      !success || error === 'Duplicate Email'
+      !success
         ? <div className={styles.wrapper}>
 
           <h1>Start learning how to code today!</h1>
@@ -54,7 +52,7 @@ export default () => {
             className="grid grid-cols-2 col-gap-4 row-gap-2"
             onSubmit={submit}
             validationSchema={signupValidation}
-            error={!success && error === 'Duplicate Email' ? 'You\'re already registered with this email!' : null}
+            error={error}
           >
             <FormField name="firstName" type="text" placeholder="First name" />
             <FormField name="lastName" type="text" placeholder="Last name" />
