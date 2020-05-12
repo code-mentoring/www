@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-
+import Link from 'next/link';
 import { Page } from '../../components/Page/Page';
 import { SETTINGS } from '../../lib/settings';
 import styles from './index.module.css';
@@ -46,9 +46,9 @@ export default () => {
     <section className={styles.title}>
       <div className="container mx-auto flex items-center pt-48 pb-10">
         <div className="w-7/12">
-          <h1>{banner.title}</h1>
+          <h1 className="title">{banner.title}</h1>
           <p className="mt-4 mb-10 max-w-md">{banner.subTitle}</p>
-          <a className="btn btn-secondary mr-4" href={banner.button1.link}>{banner.button1.text}</a>
+          <Link href={banner.button1.link}><a className="btn btn-secondary mr-4" >{banner.button1.text}</a></Link>
           <a className="btn btn-tertiary" href={banner.button2.link}>{banner.button2.text}</a>
         </div>
         <div className="w-5/12 relative">

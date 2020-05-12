@@ -1,5 +1,10 @@
-module.exports = {
-  webpack: (cfg) => {
+// Allows us to transpile @codement/ui files from source
+const withTM = require('next-transpile-modules')([
+  '@codement/ui'
+]);
+
+module.exports = withTM({
+  webpack: cfg => {
     cfg.module.rules.push(
       {
         test: /\.md$/,
@@ -15,7 +20,7 @@ module.exports = {
         test: /\.svg$/,
         loader: 'react-svg-loader'
       }
-    )
+    );
     return cfg;
   }
-}
+});
