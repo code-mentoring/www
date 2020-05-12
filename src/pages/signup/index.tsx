@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { UserInput } from '@codement/api';
+import { Button } from '@codement/ui/components/Button/Button';
 import { Form } from '@codement/ui/components/Form/Form';
 import { FormField } from '@codement/ui/components/FormField/FormField';
-import { Button } from '@codement/ui/components/Button/Button';
-import * as yup from 'yup';
-import { UserInput } from '@codement/api';
 import Link from 'next/link';
+import React, { useState } from 'react';
+import * as yup from 'yup';
+
+import { API } from '../../lib/api';
 import styles from './signup.module.css';
 import People from './welcome-people.svg';
-import { API } from '../../lib/api';
 
 
 const signupValidation = yup.object().shape({
@@ -30,7 +31,7 @@ export default () => {
       updateErrorMsg('');
     } else if (res.errors[0].message) {
       isSuccessful(false);
-      updateErrorMsg('You\'re already registered with this email!');
+      updateErrorMsg('That email is already registered!');
     }
   };
 
