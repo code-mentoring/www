@@ -6,6 +6,7 @@ const withTM = require('next-transpile-modules')([
 const replacePlugin = require('webpack-plugin-replace');
 
 const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = withTM({
   webpack: cfg => {
     cfg.module.rules.push(
@@ -26,7 +27,7 @@ module.exports = withTM({
     );
     cfg.plugins.push(new replacePlugin({
       values: {
-        '%%IS_PROD%%': isProd ? 'https://codementoring.co/' : 'http://localhost:3000'
+        '%%API%%': isProd ? 'https://api.codementoring.co/' : 'http://localhost:4000'
       }
     }));
     return cfg;
