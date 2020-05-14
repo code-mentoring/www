@@ -3,6 +3,9 @@ const withTM = require('next-transpile-modules')([
   '@codement/ui'
 ]);
 
+const replacePlugin = require('webpack-plugin-replace');
+
+const isProd = process.env.NODE_ENV === 'production';
 module.exports = withTM({
   webpack: cfg => {
     cfg.module.rules.push(
@@ -21,6 +24,11 @@ module.exports = withTM({
         loader: 'react-svg-loader'
       }
     );
+    cfg.plugins.push(new replacePlugin({
+      values: {
+        '%%IS_PROD%%': isProd ? 'https://codementoring.co/' : 'http://localhost:3000'
+      }
+    }));
     return cfg;
   }
 });
