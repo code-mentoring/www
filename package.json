@@ -45,6 +45,7 @@
     "tailwindcss-gradients": "^3.0.0",
     "typescript": "^3.8.3",
     "yaml-loader": "^0.6.0",
+    "webpack-plugin-replace": "^1.2.0",
     "yup": "^0.28.5"
   }
 }
