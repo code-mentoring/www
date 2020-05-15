@@ -6,7 +6,6 @@ export abstract class API {
   static url = '%%API%%/graphql';
 
   static async signup(user: UserInput) {
-    console.log(this.url);
     const res = await axios.post(this.url, {
       variables: { user },
       query: `mutation ($user: UserInput!) {
