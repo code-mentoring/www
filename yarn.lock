@@ -1160,10 +1160,10 @@
     typeorm "^0.2.24"
     uuid "^7.0.3"
 
-"@codement/ui@^0.0.4-feature-ci-publish.0":
-  version "0.0.4-feature-ci-publish.0"
-  resolved "https://registry.yarnpkg.com/@codement/ui/-/ui-0.0.4-feature-ci-publish.0.tgz#db44337edb116c26f9c846d82c8c10f928aef813"
-  integrity sha512-h9Hc6luqCb7NJjuToMr/buVyfpXBpX0gXPSHN9sCqkUHd+7BfLpM/fEDsd4qsh2xKwxqCS0aTH4HHdo9C3OULQ==
+"@codement/ui@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@codement/ui/-/ui-0.0.2.tgz#32b732ad1ec5c50fa6d5c16ccd2c1aae949b94ed"
+  integrity sha512-MJwPQ8dlCDsAFcg68/wBt4LRXb1MoYY0CewS/vaoA9iT3RMmXcR2KbGzmFSM/7SnDCuFAj5NFd2NZdvb1S4sVQ==
 
 "@dsherret/to-absolute-glob@^2.0.2":
   version "2.0.2"
