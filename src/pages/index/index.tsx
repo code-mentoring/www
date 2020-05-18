@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Page } from '../../components/Page/Page';
 import { SETTINGS } from '../../lib/settings';
 import styles from './index.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const { attributes: data }: {attributes: HomeContent} = require('../../../content/home.md');
 
@@ -62,7 +63,7 @@ export default () => {
       <div>
         <h3>{data.paths.title}</h3>
         <ul className="paths grid grid-cols-5 gap-4 my-6">
-          {SETTINGS.paths.map(p => <li className="text-center">
+          {SETTINGS.paths.map(p => <li key={uuidv4()} className="text-center">
             <img src={p.image} alt={p.name} className="h-12 inline-block mb-1" />
             <span className="block">{p.name}</span>
           </li>)}
@@ -85,7 +86,7 @@ export default () => {
         <h3 className="text-tertiary-500">{data.partners.title}</h3>
         <div className={`paths grid grid-cols-${data.partners.partners.length} gap-8 items-center my-6`}>
           {data.partners.partners.map(p =>
-            <img src={p.logo} alt={p.name} className="max-h-8 inline-block mb-1" />)}
+            <img key={uuidv4()} src={p.logo} alt={p.name} className="max-h-8 inline-block mb-1" />)}
         </div>
         <a href={data.partners.link} className="btn btn-tertiary">{data.partners.linkText}</a>
       </div>
