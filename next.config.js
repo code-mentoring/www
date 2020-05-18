@@ -27,7 +27,7 @@ module.exports = withTM({
     );
     cfg.plugins.push(new replacePlugin({
       values: {
-        '%%API%%': isProd ? 'https://api.codementoring.co/' : 'http://localhost:4000'
+        '%%API%%': isProd ? 'https://api.codementoring.co' : 'http://localhost:4000'
       }
     }));
     return cfg;
