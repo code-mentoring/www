@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { SETTINGS } from '../../lib/settings';
 
@@ -8,7 +9,8 @@ export const Header: React.FC = () => <header className="fixed top-0 left-0 w-fu
       <img src="/images/logo.svg" alt="Code Mentoring" className="h-12" />
     </a>
 
-    {SETTINGS.header.menu.map(l => <a
+    {SETTINGS.header.menu.map(l => <a 
+      key={uuidv4()}
       href={l.link}
       className="uppercase font-bold text-grey-500 px-2 mx-1 hover:text-primary-500 transition-colors duration-100"
     >{l.text}</a>)}

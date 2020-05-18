@@ -4,6 +4,7 @@ import React from 'react';
 import { SETTINGS } from '../../lib/settings';
 import styles from './footer.module.css';
 import { Icon } from '../Icon/Icon';
+import { v4 as uuidv4 } from 'uuid';
 
 export const Footer: React.FC = () =>
   <footer className={classnames(styles.footer, 'bg-primary-200')}>
@@ -14,6 +15,7 @@ export const Footer: React.FC = () =>
 
       <nav className="grid grid-cols-2">
         {SETTINGS.footer.menu.map(l => <a
+          key={uuidv4()}
           href={l.link}
           className="h-8 uppercase font-bold text-grey-500 px-2 mx-1 hover:text-primary-500 transition-colors duration-100"
         >{l.text}</a>)}
