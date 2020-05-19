@@ -62,7 +62,7 @@ export default () => {
       <div>
         <h3>{data.paths.title}</h3>
         <ul className="paths grid grid-cols-5 gap-4 my-6">
-          {SETTINGS.paths.map(p => <li className="text-center">
+          {SETTINGS.paths.map((p, i) => <li key={i} className="text-center">
             <img src={p.image} alt={p.name} className="h-12 inline-block mb-1" />
             <span className="block">{p.name}</span>
           </li>)}
@@ -84,8 +84,8 @@ export default () => {
       <div className="max-w-lg">
         <h3 className="text-tertiary-500">{data.partners.title}</h3>
         <div className={`paths grid grid-cols-${data.partners.partners.length} gap-8 items-center my-6`}>
-          {data.partners.partners.map(p =>
-            <img src={p.logo} alt={p.name} className="max-h-8 inline-block mb-1" />)}
+          {data.partners.partners.map((p, i) =>
+            <img key={i} src={p.logo} alt={p.name} className="max-h-8 inline-block mb-1" />)}
         </div>
         <a href={data.partners.link} className="btn btn-tertiary">{data.partners.linkText}</a>
       </div>

@@ -13,7 +13,8 @@ export const Footer: React.FC = () =>
       </a>
 
       <nav className="grid grid-cols-2">
-        {SETTINGS.footer.menu.map(l => <a
+        {SETTINGS.footer.menu.map((l, i) => <a
+          key={i}
           href={l.link}
           className="h-8 uppercase font-bold text-grey-500 px-2 mx-1 hover:text-primary-500 transition-colors duration-100"
         >{l.text}</a>)}
