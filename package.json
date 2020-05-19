@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@codement/api": "^0.0.4-feature-ci-publish.0",
-    "@codement/ui": "^0.0.4-feature-ci-publish.0",
+    "@codement/ui": "0.0.2",
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.11.1",
